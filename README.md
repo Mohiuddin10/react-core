@@ -12,3 +12,6 @@ special Notes:
 ...
 1. Install tailwind and daisy ui
 2. set custome color from daisy ui
+3. components
+4. JSX/react-element/syntectic-suger javascript xpression by beble
+5. react fragment <> </>
