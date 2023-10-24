@@ -10,12 +10,14 @@ const Countries = () => {
         .then(data => setCountries(data))
     },[])
     return (
-        <div>
-            <h3 className="text-center">Countries: {countries.length}</h3>
+        <>
+        <h3 className="text-center">Countries: {countries.length}</h3>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
             {
                 countries.map(country => <Country country={country}></Country>)
             }
         </div>
+        </>
     );
 };
 
