@@ -14,4 +14,5 @@ special Notes:
 2. set custome color from daisy ui
 3. components
 4. JSX/react-element/syntectic-suger javascript xpression by beble
-5. react fragment <> </>
+5. react fragment <> </> 
+6. jsx rule: => return single element => fragment => camelCase property name => close every element => formating using ()
