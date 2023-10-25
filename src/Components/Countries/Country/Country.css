@@ -1,0 +1,20 @@
+.country-container {
+    border: 2px solid tomato;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0px 0px 10px tomato;
+}
+.visited {
+    background: #ff7775;
+    color: black;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+}
+.not-visited {
+    background-color: lightgray;
+    color: red;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+}
