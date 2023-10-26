@@ -19,4 +19,4 @@ special Notes:
 
 
 
-7. COnditional color
+7. Conditional color
