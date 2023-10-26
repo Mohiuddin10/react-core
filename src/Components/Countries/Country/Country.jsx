@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './Country.css'
-const Country = ({country, handleVisitedCountries}) => {
+const Country = ({country, handleVisitedCountries, handleRemove}) => {
     const { name, population, capital, flags, cca3 } = country;
 
     const [visited, setVisited] = useState(false);
@@ -17,6 +17,7 @@ const Country = ({country, handleVisitedCountries}) => {
                 <div className="card-actions justify-end">
                     <button className={`w-[180px] mx-auto ${visited ? 'visited' : 'not-visited'}`} onClick={() => {handleVisited(); handleVisitedCountries(country);}}>{visited ? 'Visited' : 'Not-visited'}</button>
                     <button className={`w-[180px] mx-auto ${visited ? 'visited' : 'not-visited'}`} onClick={handleVisitedCountries}>{visited ? 'listed Visited' : 'listed Not-visited'}</button>
+                    <button onClick={() => handleRemove(country)} className='btn btn-warning mx-auto'>Remove</button>
                 </div>
             </div>
         </div>

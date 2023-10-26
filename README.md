@@ -20,3 +20,4 @@ special Notes:
 
 
 7. Conditional color
+8. map return 3 thing current value, index, arr

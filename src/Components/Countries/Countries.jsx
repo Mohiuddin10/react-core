@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import Country from "./Country/Country";
 import './Countries.css'
+import VisitedCountry from "./VisitedCountry";
 
 const Countries = () => {
     const [countries, setCountries] = useState([]);
@@ -20,13 +21,22 @@ const Countries = () => {
             setVisitedCountries(newVIsitedCountries)
         }
     }
+    const handleRemove = (country) => {
+        const newCountries = visitedCountries.filter(x => x.cca3 !== country.cca3)
+        setVisitedCountries(newCountries);
+
+    }
+    console.log(visitedCountries);
     return (
         <>
             <h3 className="text-center">Countries: {countries.length}</h3>
             <div className="">
-                <div className="">
+                <div className="text-center">
                     <h4>Visited Countries: {visitedCountries.length}</h4>
                     <ul>
+                        {
+                            visitedCountries.map((visitedCountry, idx) => <li key={idx}>{visitedCountry.name.common}</li>)
+                        }
 
                     </ul>
                 </div>
@@ -34,6 +44,7 @@ const Countries = () => {
                     {
                         countries.map(country => <Country country={country}
                             handleVisitedCountries={handleVisitedCountries}
+                            handleRemove = {handleRemove}
                             key={country.cca3}></Country>)
                     }
                 </div>
