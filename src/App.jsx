@@ -1,11 +1,12 @@
 import './App.css'
-import Countries from './Components/Countries/Countries'
+import Bottles from './Components/Bottles/Bottles/Bottles'
+
 
 function App() {
 
   return (
     <>
-      <Countries></Countries>
+      <Bottles></Bottles>
     </>
   )
 }
