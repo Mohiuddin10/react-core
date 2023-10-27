@@ -13,7 +13,7 @@ const Bottles = () => {
     return (
         <>
             <h2>Found Bottles: {bottles.length}</h2>
-            <div className="grid gird-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gird-cols-1 md:grid-cols-2">
                 {
                     bottles.map(bottle => <Bottle
                         bottle={bottle}
