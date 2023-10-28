@@ -1,8 +1,7 @@
 
 
-const Bottle = ({ bottle }) => {
+const Bottle = ({ bottle, handleAddedBottles }) => {
     const { img, name, price, quantity, rating, shipping, stock, seller } = bottle;
-    console.log(bottle);
     return (
         <div className="card card-side bg-base-100 shadow-xl">
             <figure><img src={img} alt="Movie" /></figure>
@@ -14,7 +13,7 @@ const Bottle = ({ bottle }) => {
                 <p>Stock: {stock}</p>
                 <p><small>Seller: {seller}</small></p>
                 <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Watch</button>
+                    <button onClick={() => handleAddedBottles(bottle)} className="btn btn-primary">Add to cart</button>
                 </div>
             </div>
         </div>
