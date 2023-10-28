@@ -14,10 +14,14 @@ const Bottles = () => {
     }, []);
 
     useEffect(() => {
-        const storedCart = getStoredCart();
-        const cartProduct = storedCart.map(singleCartID => bottles.find(singleCartID === bottles.id));
-        console.log(cartProduct);
-    },[])
+        
+        const storedCartNew = [];
+        if (bottles){
+            const storedCart = getStoredCart();
+            const cart = bottles.find(bottle => bottle.id === storedCart.id)
+            console.log(cart);
+        }
+    }, [bottles])
 
     const handleAddedBottles = (bottle) => {
         const newAddedBottles = [...addedBottles, bottle];
@@ -30,7 +34,7 @@ const Bottles = () => {
             <div className="">
                 <h3>Shopping Cart Item: {addedBottles.length}</h3>
                 {
-                    addedBottles.map(x => <li key= {x.id}>{x.name}</li>)
+                    addedBottles.map(x => <li key={x.id}>{x.name}</li>)
                 }
             </div>
             <div className="grid gird-cols-1 md:grid-cols-2">
@@ -41,7 +45,7 @@ const Bottles = () => {
                         key={bottle.id}></Bottle>)
                 }
             </div>
-            
+
         </>
     );
 };
